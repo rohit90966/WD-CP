@@ -1,0 +1,271 @@
+/* General reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Top navigation bar */
+.nav1 {
+    height: 32px;
+    background-color: #002246;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-element1 {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+#nav1-text {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Main navigation bar */
+.nav2 {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#nav2-logo {
+    height: 60px;
+}
+
+#icons-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav2-icon {
+    height: 50px;
+    margin: 0 10px;
+}
+
+/* Navigation menu */
+.nav3 {
+    background-color: #050a11;
+    padding: 10px 0;
+    height: 60px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:space-around;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* hero section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    height: 700px; /* Adjust height according to your needs */
+}
+
+.image-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+/* next hero */
+.scroll-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e90ff, #ff6b6b);
+    animation: gradient-scroll 5s infinite alternate;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .content {
+    text-align: center;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 1s forwards ease-out;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffde59;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 20px;
+  }
+  
+  .stat-item {
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: #ffde59;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Animations */
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes gradient-scroll {
+    to {
+      background: linear-gradient(135deg, #ff6b6b, #1e90ff);
+    }
+  }
+
+
+  /* footer */
+
+  .footer {
+    background-color: #23292d;
+    color: #ffffff;
+    font-size: 0.9rem;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+  }
+  
+  .footer-top a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 15px;
+    border-right: 1px solid #444;
+  }
+  
+  .footer-top a:last-child {
+    border-right: none;
+  }
+  
+  .footer-top a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.85rem;
+  }
+  
+  .footer-bottom .highlight {
+    color: #ffde59;
+    font-weight: bold;
+  }
+  
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .scroll-top button {
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scroll-top button:hover {
+    background-color: #0a74d9;
+  }
