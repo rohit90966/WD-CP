@@ -31,32 +31,75 @@
     </div>
 
     <!-- Navigation menu -->
+  
     <div class="nav3">
-        <ul class="menu">
-            <li><a href="#">Who We Are</a></li>
-            <li><a href="#">Banking</a></li>
-            <li><a href="#">Insurance</a></li>
-            <li><a href="#">Pension Reforms</a></li>
-            <li><a href="#">Financial Inclusion</a></li>
-            <li><a href="#">Public Financial Institutions</a></li>
-            <li><a href="#">Cyber Security & Fintech</a></li>
-            <li><a href="#">Grievances</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">RTI</a></li>
-        </ul>
-    </div>
+      <ul class="menu">
+          <li>
+              <a href="#">Who We Are</a>
+              <ul class="dropdown">
+                  <li>
+                      <a href="#">Overview</a>
+                      <ul class="submenu">
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Allocation of Business</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Meet the Ministers</a></li>
+                  <li><a href="#">Meet the Secretary</a></li>
+                  <li><a href="#">Organisational Chart</a></li>
+                  <li><a href="#">Work Allocation</a></li>
+                  <li><a href="#">Who's Who</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Banking</a>
+            <ul class="dropdown">
+              <li><a href="#">Banking Reforms</a></li>
+              <li><a href="#">Financial Inclusion</a></li>
+              <li><a href="#">Financial Stability</a></li>
+              <li><a href="#">Financial Literacy</a></li>
+              <li><a href="#">Financial Inclusion Fund</a></li>
+              <li><a href="#">Financial Inclusion Advisory Committee</a></li>
+              <li><a href="#">Financial Inclusion Index</a></li>
+              <li><a href="#">Financial Inclusion Portal</a></li>
+              <li><a href="#">Financial Inclusion Research Fund</a></li>
+              <li><a href="#">Financial Inclusion Technology Fund</a></li>
+              <li><a href="#">Financial Inclusion Training and Research
+            </ul>  
+          </li>
+          <li><a href="#">Insurance</a></li>
+          <li><a href="#">Pension Reforms</a></li>
+          <li><a href="#">Financial Inclusion</a></li>
+          <li><a href="#">Public Financial Institutions</a></li>
+          <li><a href="#">Cyber Security & Fintech</a></li>
+          <li><a href="#">Grievances</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">RTI</a></li>
 
+      </ul>
+  </div>
+  
     <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="image-carousel">
-            <img src="/photos/hero-1.png" alt="Slide 1" class="hero-image">
-            <img src="/photos/hero-3.jpg" alt="Slide 2" class="hero-image">
-            <img src="/photos/hero-2.jpeg" alt="Slide 3" class="hero-image">
-            <img src="/photos/hero-4.jpeg" alt="Slide 4" class="hero-image">
-        </div>
-        <button class="prev-btn">&#8249;</button>
-        <button class="next-btn">&#8250;</button>
-    </div>
+    <div class="hero-container">
+      <div class="hero-slide">
+          <div class="hero-image">
+              <img src="/photos/hero-1.png" alt="Image 1">
+          </div>
+          <div class="hero-image">
+              <img src="/photos/hero-2.jpeg" alt="Image 2">
+          </div>
+          <div class="hero-image">
+              <img src="/photos/hero-3.jpg" alt="Image 3">
+          </div>
+          <div class="hero-image">
+              <img src="/photos/hero-4.jpeg" alt="Image 4">
+          </div>
+      </div>
+      <button class="nav-button prev-button" onclick="prevSlide()">&#10094;</button>
+      <button class="nav-button next-button" onclick="nextSlide()">&#10095;</button>
+      <button class="register-btn">Register Now</button>
+  </div>
+  
    <!-- # next hero -->
    <div class="scroll-section">
     <div class="content">
@@ -82,6 +125,11 @@
     </div>
   </div>
 
+
+  <!-- hero3 -->
+<div id="hero3">
+
+</div>
   <!-- footer -->
   <footer class="footer">
     <div class="footer-top">

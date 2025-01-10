@@ -1,50 +1,22 @@
-document.querySelector('.next-btn').addEventListener('click', () => {
-    const carousel = document.querySelector('.image-carousel');
-    const totalImages = document.querySelectorAll('.hero-image').length;
-    const currentScroll = carousel.scrollLeft;
-    const newScroll = currentScroll + window.innerWidth;
+const heroSlide = document.querySelector('.hero-slide');
+const heroImages = document.querySelectorAll('.hero-image');
+let currentSlide = 0;
+const numSlides = heroImages.length;
 
-    if (newScroll < carousel.scrollWidth) {
-        carousel.scrollLeft = newScroll;
+function showSlide(n) {
+    if (n < 0) {
+        n = numSlides - 1;
+    } else if (n >= numSlides) {
+        n = 0;
     }
-});
+    heroSlide.style.transform = `translateX(-${n * 100}%)`;
+    currentSlide = n;
+}
 
-document.querySelector('.prev-btn').addEventListener('click', () => {
-    const carousel = document.querySelector('.image-carousel');
-    const newScroll = carousel.scrollLeft - window.innerWidth;
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
 
-    if (newScroll >= 0) {
-        carousel.scrollLeft = newScroll;
-    }
-});
-
-// Auto scroll every 5 seconds
-setInterval(() => {
-    const carousel = document.querySelector('.image-carousel');
-    const totalImages = document.querySelectorAll('.hero-image').length;
-    const currentScroll = carousel.scrollLeft;
-    const newScroll = currentScroll + window.innerWidth;
-
-    if (newScroll < carousel.scrollWidth) {
-        carousel.scrollLeft = newScroll;
-    } else {
-        carousel.scrollLeft = 0; // Reset to first image if it reaches the end
-    }
-}, 5000);
-
-document.addEventListener("scroll", () => {
-    const content = document.querySelector(".content");
-    const scrollY = window.scrollY;
-  
-    if (scrollY > 50) {
-      content.style.animation = "fade-in 1s forwards ease-out";
-    }
-  });
-  
-
-
-//   footer
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-  
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
